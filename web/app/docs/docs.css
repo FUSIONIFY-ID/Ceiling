@@ -1,0 +1,367 @@
+/* ==========================================================
+   CEILING — documentation
+   Reading-first: 17px body, generous measure, no type below 12px.
+   ========================================================== */
+
+.docs {
+  --toc: 250px;
+  background: var(--bg);
+}
+
+.docs-nav {
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+}
+
+.site-nav-links a.is-active {
+  color: var(--blue);
+}
+
+/* ---------- HERO ---------- */
+
+.docs-hero {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(48px, 6vw, 88px) var(--space) clamp(36px, 4vw, 56px);
+  border-bottom: 1px solid var(--line);
+}
+
+.docs-hero h1 {
+  margin: 16px 0 20px;
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 720;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.docs-lede {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.62;
+}
+
+.docs-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(24px, 4vw, 64px);
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.docs-meta span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-family: var(--font-code);
+  font-size: 12px;
+  font-weight: 550;
+  letter-spacing: 0.14em;
+}
+
+.docs-meta b {
+  font-family: var(--font-code);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.docs-meta a:hover {
+  color: var(--blue);
+}
+
+/* ---------- LAYOUT ---------- */
+
+.docs-body {
+  display: grid;
+  grid-template-columns: var(--toc) minmax(0, 1fr);
+  gap: clamp(30px, 5vw, 72px);
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(40px, 5vw, 72px) var(--space) clamp(60px, 8vw, 120px);
+}
+
+.docs-toc {
+  position: sticky;
+  top: 92px;
+  align-self: start;
+  max-width: var(--toc);
+}
+
+.docs-toc p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-family: var(--font-code);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.docs-toc ol {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.docs-toc a {
+  display: block;
+  padding: 7px 0 7px 14px;
+  border-left: 2px solid var(--line);
+  color: var(--muted);
+  font-size: 15px;
+  transition:
+    color var(--motion),
+    border-color var(--motion);
+}
+
+.docs-toc a:hover {
+  color: var(--ink);
+}
+
+.docs-toc a.is-active {
+  border-left-color: var(--blue);
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.docs-content {
+  max-width: 76ch;
+}
+
+/* ---------- CONTENT ---------- */
+
+.docs-content section {
+  padding-bottom: clamp(34px, 4vw, 54px);
+  margin-bottom: clamp(34px, 4vw, 54px);
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 96px;
+}
+
+.docs-content section:last-of-type {
+  border-bottom: none;
+}
+
+.docs-content h2 {
+  margin: 0 0 22px;
+  font-size: clamp(26px, 2.6vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.docs-content h3 {
+  margin: 32px 0 12px;
+  font-size: 19px;
+  font-weight: 660;
+  letter-spacing: -0.02em;
+}
+
+.docs-content p {
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.72;
+}
+
+.docs-content code {
+  overflow-wrap: anywhere;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--blue) 9%, transparent);
+  color: #0d5cb8;
+  font-family: var(--font-code);
+  font-size: 0.88em;
+  font-weight: 550;
+}
+
+.docs-content pre {
+  overflow-x: auto;
+  margin: 0 0 20px;
+  padding: 20px 22px;
+  border: 1px solid var(--deep-border);
+  border-radius: 4px;
+  background: var(--deep);
+}
+
+.docs-content pre code {
+  padding: 0;
+  background: none;
+  color: #cfe0f7;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.docs-list,
+.docs-steps {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+.docs-list li {
+  margin-bottom: 10px;
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.68;
+}
+
+.docs-steps {
+  display: grid;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.docs-steps li {
+  padding-left: 20px;
+  border-left: 2px solid var(--line);
+}
+
+.docs-steps b {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--blue);
+  font-family: var(--font-code);
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+}
+
+.docs-steps p {
+  margin: 0;
+}
+
+/* ---------- CALLOUT ---------- */
+
+.callout {
+  margin: 0 0 20px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--blue);
+  border-radius: 3px;
+  background: var(--surface);
+}
+
+.callout b {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 680;
+}
+
+.callout p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.callout-warn {
+  border-left-color: var(--failure);
+}
+
+/* ---------- TABLE ---------- */
+
+.docs-table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.docs-table th,
+.docs-table td {
+  padding: 13px 14px 13px 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.docs-table th {
+  color: var(--muted);
+  font-family: var(--font-code);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+/* ---------- PROOF LIST ---------- */
+
+.docs-proof {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.docs-proof div {
+  display: grid;
+  gap: 6px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.docs-proof dt {
+  color: var(--muted);
+  font-family: var(--font-code);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.docs-proof dd {
+  overflow-wrap: anywhere;
+  margin: 0;
+  font-family: var(--font-code);
+  font-size: 14px;
+}
+
+.docs-proof dd code {
+  padding: 0;
+  background: none;
+  color: var(--ink);
+}
+
+.docs-proof a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- FOOTER CTA ---------- */
+
+.docs-next {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  padding-top: 12px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1080px) {
+  .docs-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .docs-toc {
+    position: relative;
+    top: auto;
+    max-width: none;
+    margin: 0 0 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .docs-toc ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+
+  .docs-toc a {
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    font-size: 14px;
+  }
+
+}

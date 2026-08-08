@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useLayoutEffect, useRef } from "react";
 
 import { BillingRail } from "@/components/home/billing-rail";
+import { LaunchLink } from "@/components/launch-transition";
 import { MONADSCAN, PROOF } from "@/lib/proof";
 import { UNITS } from "@/lib/session";
 import { isCompact, pinDistance, reducedMotion, setupScrollMotion } from "@/lib/motion";
@@ -164,9 +165,7 @@ export function CinematicHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Link className="button" href="/demo">
-              Launch App
-            </Link>
+            <LaunchLink className="button">Launch App</LaunchLink>
             <Link className="text-link" href={`${MONADSCAN}/address/${PROOF.contract}`}>
               View On-chain Proof <span aria-hidden="true">↗</span>
             </Link>

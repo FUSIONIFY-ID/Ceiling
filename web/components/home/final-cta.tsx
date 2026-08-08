@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import { GITHUB } from "@/lib/proof";
+import { LaunchLink } from "@/components/launch-transition";
 import { UNITS } from "@/lib/session";
 
 const TECH = [
@@ -42,13 +42,11 @@ export function FinalCta() {
         </p>
         <div className="button-row">
           <motion.span whileHover={{ y: -2 }} whileTap={{ y: 0 }}>
-            <Link className="button button-white" href="/demo">
-              Launch App
-            </Link>
+            <LaunchLink className="button button-white">Launch App</LaunchLink>
           </motion.span>
           <motion.span whileHover={{ x: 3 }}>
-            <Link className="text-link text-link-light" href={GITHUB}>
-              View Repository <span aria-hidden="true">↗</span>
+            <Link className="text-link text-link-light" href="/docs">
+              Read the Docs <span aria-hidden="true">↗</span>
             </Link>
           </motion.span>
         </div>

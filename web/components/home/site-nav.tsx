@@ -4,14 +4,14 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+import { LaunchLink } from "@/components/launch-transition";
 import { Mark } from "@/components/site-shell";
-import { GITHUB } from "@/lib/proof";
 
 const LINKS = [
   ["Product", "/#product"],
   ["Mechanism", "/#mechanism"],
   ["Proof", "/#proof"],
-  ["Docs", `${GITHUB}/tree/main/docs`],
+  ["Docs", "/docs"],
 ] as const;
 
 export function SiteNav() {
@@ -49,9 +49,9 @@ export function SiteNav() {
           Monad Testnet
         </span>
         <motion.span whileHover={{ y: -1 }} whileTap={{ y: 0 }}>
-          <Link className="button button-small" href="/demo">
+          <LaunchLink className="button button-small">
             Launch App <span aria-hidden="true">↗</span>
-          </Link>
+          </LaunchLink>
         </motion.span>
       </div>
     </header>

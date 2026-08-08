@@ -1,12 +1,17 @@
 :root {
-  --bg: #f7f8fa;
-  --surface: #ffffff;
-  --surface-soft: #fafbfc;
+  /* Softened off-white palette — the page should read as paper, not a lightbox. */
+  --bg: #e7ecf3;
+  --surface: #f8fafd;
+  --surface-soft: #f1f4fa;
   --ink: #0c1633;
   --text: #111827;
-  --muted: #687386;
-  --line: #dde3ec;
+  --muted: #4f5a6e;
+  --line: #ccd5e3;
   --line-dark: #24304e;
+  /* Dark-blue surfaces shared by the app and docs. */
+  --deep: #08142f;
+  --deep-soft: #0e1e42;
+  --deep-border: #223154;
   --blue: #1473e6;
   --blue-light: #5ba7f4;
   --success: #168a55;
@@ -1772,4 +1777,67 @@ button {
     height: auto;
     min-height: 100vh;
   }
+}
+
+/* ==========================================================
+   READABILITY LAYER
+   Mono labels across the app were 7–11px and too light to read
+   comfortably on a desktop display. This raises the floor to 12px,
+   adds weight, and loosens tracking so the technical voice survives.
+   ========================================================== */
+
+.eyebrow,
+.chapter,
+.workspace-heading,
+.footer-label {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.trace-heading,
+.machine-topline,
+.workspace-heading,
+.trace-authorized span,
+.trace-total span,
+.authorized-grid span,
+.machine-counter span,
+.settlement-machine span,
+.demo-counter span,
+.demo-equation span,
+.demo-recompute > span,
+.record-inspector span {
+  font-size: 12px;
+  font-weight: 550;
+  letter-spacing: 0.07em;
+}
+
+.trace-legend,
+.story-index,
+.demo-status,
+.demo-proof-status p,
+.session-lane code,
+.session-lane b,
+.unit small,
+.demo-slot {
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.site-footer a,
+.site-footer span:not(.wordmark):not(.mark) {
+  font-size: 14px;
+}
+
+.footer-identity p {
+  font-size: 15px;
+}
+
+.main-nav,
+.nav-actions,
+.network {
+  font-size: 14px;
+}
+
+.hero-lede {
+  color: #3d4759;
 }

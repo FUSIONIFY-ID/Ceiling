@@ -57,8 +57,8 @@ export function Footer() {
       </div>
       <div>
         <p className="footer-label">DEVELOPERS</p>
+        <Link href="/docs">Docs</Link>
         <Link href={GITHUB}>GitHub</Link>
-        <Link href={`${GITHUB}/tree/main/docs`}>Docs</Link>
         <Link href={`${MONADSCAN}/address/${PROOF.contract}`}>Contract</Link>
       </div>
       <div>

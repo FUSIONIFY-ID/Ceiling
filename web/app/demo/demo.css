@@ -1,0 +1,215 @@
+/* ==========================================================
+   CEILING APP — dark blue theme
+   Overrides the shared light styles for /demo only. Type floor
+   is 12px; nothing here relies on colour alone to convey state.
+   ========================================================== */
+
+.demo-page {
+  --panel: #0e1e42;
+  --panel-soft: #122548;
+  --edge: #223154;
+  --dim: rgba(255, 255, 255, 0.58);
+  min-height: 100vh;
+  background: var(--deep);
+  color: #eef3fb;
+}
+
+.demo-page .demo-nav {
+  border-bottom: 1px solid var(--edge);
+  background: color-mix(in srgb, var(--deep) 88%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.demo-page .wordmark {
+  color: #fff;
+}
+
+.demo-page .text-link {
+  color: var(--dim);
+  font-size: 14px;
+}
+
+.demo-page .text-link:hover {
+  color: var(--blue-light);
+}
+
+.demo-page .eyebrow {
+  color: var(--blue-light);
+  font-size: 12px;
+}
+
+.demo-page .demo-head h1 {
+  color: #fff;
+}
+
+/* ---------- CONTROLS ---------- */
+
+.demo-page .demo-status {
+  color: var(--dim);
+  font-size: 12px;
+  font-weight: 550;
+  letter-spacing: 0.1em;
+}
+
+.demo-page .reset-button {
+  border: 1px solid var(--edge);
+  border-radius: 5px;
+  color: var(--dim);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.demo-page .reset-button:hover {
+  border-color: var(--blue-light);
+  color: #fff;
+}
+
+/* ---------- PANELS ---------- */
+
+.demo-page .demo-meter,
+.demo-page .demo-ledger,
+.demo-page .record-inspector,
+.demo-page .demo-proof-status > div {
+  border-color: var(--edge);
+  background: var(--panel);
+}
+
+.demo-page .workspace-heading,
+.demo-page .demo-head,
+.demo-page .demo-workspace,
+.demo-page .demo-proof-status,
+.demo-page .record-inspector > * {
+  border-color: var(--edge);
+}
+
+.demo-page .workspace-heading,
+.demo-page .demo-counter span,
+.demo-page .demo-equation span,
+.demo-page .demo-recompute > span,
+.demo-page .record-inspector span {
+  color: var(--dim);
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.demo-page .demo-counter strong,
+.demo-page .demo-ledger dd,
+.demo-page .demo-equation strong {
+  color: #fff;
+}
+
+.demo-page .demo-counter small {
+  color: var(--dim);
+}
+
+/* ---------- UNIT SLOTS ---------- */
+
+.demo-page .demo-slot {
+  border-color: var(--edge);
+  color: var(--dim);
+  background: var(--panel-soft);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.demo-page .demo-slot-accepted {
+  border-color: var(--blue);
+  color: #fff;
+  background: var(--blue);
+}
+
+.demo-page .demo-slot-rejected {
+  border-color: var(--failure);
+  color: #fff;
+  background: var(--failure);
+}
+
+/* ---------- RECORD INSPECTOR ---------- */
+
+.demo-page .record-inspector pre {
+  color: #cfe0f7;
+  font-size: 14px;
+}
+
+.demo-page .record-inspector > div > strong {
+  color: #fff;
+}
+
+.demo-page .validator-result strong {
+  color: var(--blue-light);
+  font-size: 14px;
+}
+
+.demo-page .validator-result b {
+  color: var(--failure);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+/* ---------- LEDGER ---------- */
+
+.demo-page .demo-ledger dt {
+  color: var(--dim);
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.demo-page .demo-ledger dd,
+.demo-page .demo-equation p,
+.demo-page .demo-equation strong {
+  color: #fff;
+}
+
+.demo-page .demo-ledger > dl > div {
+  border-color: var(--edge);
+}
+
+.demo-page .demo-recompute p {
+  color: var(--dim);
+  border-color: var(--edge);
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.demo-page .demo-recompute p b {
+  color: var(--success);
+}
+
+.demo-page .demo-recompute strong {
+  color: var(--blue-light);
+}
+
+/* ---------- PROOF STATUS ---------- */
+
+.demo-page .demo-proof-status p {
+  color: var(--dim);
+  font-size: 13px;
+}
+
+.demo-page .demo-proof-status p b {
+  color: var(--blue-light);
+}
+
+.demo-page .demo-proof-status p b.waiting {
+  color: #e6a53d;
+}
+
+.demo-page .demo-proof-status a {
+  color: var(--blue-light);
+}
+
+.demo-page .demo-proof-status a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.demo-page .demo-error {
+  color: var(--failure);
+  font-size: 15px;
+}
+
+/* Success/failure state must not rely on colour alone. */
+.demo-page .demo-slot-rejected::after {
+  content: "";
+}

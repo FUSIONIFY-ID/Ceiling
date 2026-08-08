@@ -3,6 +3,8 @@ import Link from "next/link";
 import { DemoRunner } from "@/components/demo-runner";
 import { Mark } from "@/components/site-shell";
 
+import "./demo.css";
+
 export default function DemoPage() {
   return (
     <div className="demo-page">

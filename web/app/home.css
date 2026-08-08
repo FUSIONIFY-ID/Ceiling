@@ -1323,3 +1323,188 @@ html {
     transform: none;
   }
 }
+
+/* ==========================================================
+   READABILITY PASS
+   Every mono label on this page was 7–10px. Raised to a 12px floor
+   with more weight; the rail keeps its density by labelling every
+   fifth unit instead of shrinking type nobody can read.
+   ========================================================== */
+
+.hero-facts dt,
+.rail-plane-label,
+.rail-readout span,
+.bound-values dt,
+.thread,
+.mech-steps,
+.panel-label,
+.policy-block div,
+.policy-hash span,
+.auth-bracket span,
+.settle-equation em,
+.mech-cut,
+.proof-rows div,
+.recompute-pass,
+.proof-layer,
+.lanes-label,
+.lane,
+.tech-strip span,
+.final-rail,
+.hero-foot {
+  font-size: 12px;
+  font-weight: 550;
+  letter-spacing: 0.08em;
+}
+
+.policy-hash,
+.policy-hash code,
+.onchain-data a {
+  font-size: 13px;
+  font-weight: 550;
+}
+
+.rail-plane-label b {
+  font-size: 21px;
+}
+
+.rail-readout strong {
+  font-size: clamp(20px, 2.2vw, 30px);
+}
+
+.recompute-pass strong {
+  font-size: 24px;
+}
+
+/* Rail numbers: label every fifth marker so 12px still fits. */
+.rail-unit small,
+.mech-units small {
+  display: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.rail-unit:nth-child(5n + 1) small,
+.rail-unit:nth-child(18) small,
+.mech-units li:nth-child(5n + 1) small,
+.mech-units li:nth-child(18) small {
+  display: block;
+}
+
+.rail-unit:nth-child(18) small,
+.mech-units li:nth-child(18) small {
+  color: var(--failure);
+}
+
+/* Body copy contrast */
+.onchain-lede,
+.concurrency-head p,
+.panel-note,
+.problem-columns p:not(.chapter) {
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.concurrency-head p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.lane {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.lane b {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.lanes-label {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.proof-rows dt {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.recompute-pass {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.final-rail {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.onchain-data span {
+  color: var(--muted);
+}
+
+/* ==========================================================
+   LAUNCH TRANSITION
+   The ceiling plane drops over the page, the units resolve,
+   then the route changes.
+   ========================================================== */
+
+.launch-veil {
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--deep);
+  transform-origin: top center;
+}
+
+.launch-inner {
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+  width: min(88vw, 520px);
+  text-align: center;
+}
+
+.launch-label {
+  margin: 0;
+  color: var(--blue-light);
+  font-family: var(--font-code);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+.launch-amount {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(38px, 6vw, 62px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.launch-units {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.launch-units li {
+  height: 26px;
+  flex: 1;
+  border-radius: 1px;
+  background: var(--blue-light);
+}
+
+.launch-note {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-code);
+  font-size: 12px;
+  font-weight: 550;
+  letter-spacing: 0.16em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .launch-veil {
+    display: none;
+  }
+}
