@@ -65,6 +65,16 @@ export function DemoRunner() {
     : 0;
   const current = data?.records[Math.max(0, Math.min(visible - 1, 17))];
   const isDone = phase === "complete";
+  const status =
+    phase === "ready"
+      ? "READY"
+      : phase === "loading" || phase === "running"
+        ? "PROCESSING"
+        : phase === "cut"
+          ? "STREAM CUT"
+          : phase === "complete"
+            ? "RECOMPUTATION PASS"
+            : "ERROR";
 
   return (
     <main className="demo-main">
@@ -76,7 +86,7 @@ export function DemoRunner() {
         <div className="demo-controls">
           <span className={`demo-status status-${phase}`}>
             <i />
-            {phase === "ready" ? "READY" : phase.toUpperCase()}
+            {status}
           </span>
           <button className="button" type="button" onClick={run} disabled={phase === "loading" || phase === "running" || phase === "cut"}>
             RUN SESSION
@@ -163,15 +173,16 @@ export function DemoRunner() {
 
       <section className="demo-proof-status">
         <div>
-          <p className="eyebrow">CORE / ON-CHAIN PROOF</p>
+          <p className="eyebrow">MONAD TESTNET</p>
           <p><span>DETERMINISTIC CORE</span><b>{isDone ? "PASS" : "READY"}</b></p>
-          <p><span>MONAD READBACK</span><b>{data?.proof.readback ?? "PASS"}</b></p>
-          <p><span>CONTRACT</span><Link href="https://testnet.monadscan.com/address/0xbd06bb4d0a50f84fec7dcd3a916605ff662e7d61">VIEW ↗</Link></p>
+          <p><span>CEILINGREGISTRY</span><Link href="https://testnet.monadscan.com/address/0xbd06bb4d0a50f84fec7dcd3a916605ff662e7d61">0xbd06...7d61 ↗</Link></p>
+          <p><span>COMMIT</span><Link href="https://testnet.monadscan.com/tx/0x19aa15f6021deb6c368bed2fecb63bb1e07ab69fbaaad1f9a113a82b609b2c51">0x19aa...2c51 ↗</Link></p>
+          <p><span>OUTCOME</span><Link href="https://testnet.monadscan.com/tx/0xa6b47e9695d056ce07b4478e29af3c34550c8100b753df7b475c4c2f9cbc9227">0xa6b4...9227 ↗</Link></p>
+          <p><span>ON-CHAIN READBACK</span><b>{data?.proof.readback === "PASS" ? "MATCH" : "—"}</b></p>
         </div>
         <div>
-          <p className="eyebrow">X402 PAYMENT STATUS</p>
-          <p><span>x402 INTEGRATION</span><b>{data?.payment.integration ?? "READY"}</b></p>
-          <p><span>FACILITATOR PREFLIGHT</span><b>{data?.payment.preflight ?? "PASS"}</b></p>
+          <p className="eyebrow">X402 PAYMENT</p>
+          <p><span>PREFLIGHT</span><b>{data?.payment.preflight ?? "PASS"}</b></p>
           <p><span>LIVE SETTLEMENT</span><b className="waiting">{data?.payment.liveSettlement ?? "WAITING FOR TEST USDC"}</b></p>
         </div>
       </section>

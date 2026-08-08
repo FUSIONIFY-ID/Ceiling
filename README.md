@@ -4,6 +4,10 @@
 
 Ceiling is metered API billing infrastructure. It commits pricing and acceptance rules before output exists, meters only output that satisfies them, and produces a bill anyone can independently recompute.
 
+**Live Demo:** <https://ceiling.fusionify.biz.id>
+
+**Monad Contract:** <https://testnet.monadscan.com/address/0xbd06bb4d0a50f84fec7dcd3a916605ff662e7d61>
+
 ## Why Ceiling
 
 Normal usage billing asks the buyer to trust how the vendor defines a unit, counts usage, treats invalid output, and calculates the final invoice.
@@ -183,9 +187,11 @@ PAY_TO_PRIVATE_KEY=
 | CeilingRegistry deployment | PASS |
 | On-chain session commit | PASS |
 | On-chain outcome record | PASS |
+| Interactive web demo | PASS |
+| Public web deployment | PASS |
 | x402 preflight | PASS |
-| Live USDC payment | BLOCKED — test USDC funding |
-| Live refund | BLOCKED — requires preceding payment |
+| Live x402 settlement | WAITING FOR TEST USDC |
+| Live refund | WAITING FOR PAYMENT |
 
 Deployed registry: `0xbd06bb4d0a50f84fec7dcd3a916605ff662e7d61`.
 No live USDC payment or refund is claimed.

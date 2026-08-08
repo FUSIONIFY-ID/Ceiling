@@ -4,10 +4,9 @@
   "description": "Ceiling product website and deterministic demo",
   "private": true,
   "scripts": {
-    "predev": "npm --prefix .. run demo:web:generate",
     "dev": "next dev",
-    "prebuild": "npm --prefix .. run demo:web:generate",
     "build": "next build --webpack",
+    "refresh-demo": "npm --prefix .. run demo:web:generate",
     "start": "next start",
     "typecheck": "next typegen && tsc --noEmit",
     "lint": "eslint app components lib --max-warnings=0"

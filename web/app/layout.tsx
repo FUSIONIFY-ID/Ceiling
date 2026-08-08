@@ -8,8 +8,12 @@ const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
   title: "Ceiling — Metered billing you can recompute",
-  description:
-    "Precommitted policy, deterministic metering, published output, and a recomputable bill recorded on Monad.",
+  description: "Authorize the ceiling. Pay only for what held up.",
+  openGraph: {
+    title: "Ceiling — Metered billing you can recompute",
+    description: "Authorize the ceiling. Pay only for what held up.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
