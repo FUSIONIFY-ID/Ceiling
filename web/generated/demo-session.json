@@ -1,0 +1,349 @@
+{
+  "sessionId": "0xc44cd0b5674ecd5543c4ecfcf18d6897b42d367da8bd1fad15e58f065b5c528b",
+  "policy": {
+    "version": 1,
+    "validator": "canonical-json-record-v1",
+    "unitDefinition": "one canonical JSON record",
+    "schema": {
+      "name": "string",
+      "score": "finite-number"
+    },
+    "failurePolicy": "cut-on-first-invalid",
+    "unitPriceAtomic": "2000",
+    "maxUnits": 25
+  },
+  "policyHash": "0x2649acf4fe4f9f179b61b2b717d3b58299298de37eefcc8118aaafc328c3f123",
+  "records": [
+    {
+      "unit": 1,
+      "record": {
+        "name": "record-1-bb5b4f32",
+        "score": 91.42
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 2,
+      "record": {
+        "name": "record-2-8511abec",
+        "score": 46.22
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 3,
+      "record": {
+        "name": "record-3-bde2089a",
+        "score": 86.24
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 4,
+      "record": {
+        "name": "record-4-62d7eaa2",
+        "score": 16.59
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 5,
+      "record": {
+        "name": "record-5-6fff4903",
+        "score": 34.66
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 6,
+      "record": {
+        "name": "record-6-5d3227ec",
+        "score": 17.67
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 7,
+      "record": {
+        "name": "record-7-203aca6b",
+        "score": 97.53
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 8,
+      "record": {
+        "name": "record-8-57854cd0",
+        "score": 69.24
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 9,
+      "record": {
+        "name": "record-9-3df9483f",
+        "score": 31.71
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 10,
+      "record": {
+        "name": "record-10-8b2aea40",
+        "score": 20.43
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 11,
+      "record": {
+        "name": "record-11-1a32af51",
+        "score": 53.49
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 12,
+      "record": {
+        "name": "record-12-b4cdbf1d",
+        "score": 93.78
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 13,
+      "record": {
+        "name": "record-13-66edcfca",
+        "score": 85.9
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 14,
+      "record": {
+        "name": "record-14-3d88e840",
+        "score": 93.01
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 15,
+      "record": {
+        "name": "record-15-309ff800",
+        "score": 85.1
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 16,
+      "record": {
+        "name": "record-16-3c6c662f",
+        "score": 56.44
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 17,
+      "record": {
+        "name": "record-17-a592111b",
+        "score": 55.22
+      },
+      "validation": {
+        "valid": true,
+        "reason": null
+      },
+      "billed": true,
+      "afterCut": false
+    },
+    {
+      "unit": 18,
+      "record": {
+        "name": "record-18",
+        "score": null
+      },
+      "validation": {
+        "valid": false,
+        "reason": "score_not_finite"
+      },
+      "billed": false,
+      "afterCut": false
+    },
+    {
+      "unit": 19,
+      "record": {
+        "name": "record-19-6261dfe1",
+        "score": 64.32
+      },
+      "validation": null,
+      "billed": false,
+      "afterCut": true
+    },
+    {
+      "unit": 20,
+      "record": {
+        "name": "record-20-6a27b6cf",
+        "score": 95.19
+      },
+      "validation": null,
+      "billed": false,
+      "afterCut": true
+    },
+    {
+      "unit": 21,
+      "record": {
+        "name": "record-21-033d0eb0",
+        "score": 76.72
+      },
+      "validation": null,
+      "billed": false,
+      "afterCut": true
+    },
+    {
+      "unit": 22,
+      "record": {
+        "name": "record-22-ff80a765",
+        "score": 29.22
+      },
+      "validation": null,
+      "billed": false,
+      "afterCut": true
+    },
+    {
+      "unit": 23,
+      "record": {
+        "name": "record-23-86e228b3",
+        "score": 22.25
+      },
+      "validation": null,
+      "billed": false,
+      "afterCut": true
+    },
+    {
+      "unit": 24,
+      "record": {
+        "name": "record-24-bd710069",
+        "score": 16.99
+      },
+      "validation": null,
+      "billed": false,
+      "afterCut": true
+    },
+    {
+      "unit": 25,
+      "record": {
+        "name": "record-25-32f1b437",
+        "score": 56.5
+      },
+      "validation": null,
+      "billed": false,
+      "afterCut": true
+    }
+  ],
+  "outputHash": "0xc63b3f62cfe8ee0fced6f8488804b36825f42f3f251de2196bea7e8903e1f986",
+  "acceptedUnits": 17,
+  "rejectedAt": 18,
+  "maxUnits": 25,
+  "unitPriceAtomic": "2000",
+  "ceilingAmount": "50000",
+  "actualAmount": "34000",
+  "unusedAmount": "16000",
+  "recomputation": {
+    "policyHashMatches": true,
+    "outputHashMatches": true,
+    "acceptedUnitsMatches": true,
+    "actualAmountMatches": true,
+    "billingMatches": true
+  },
+  "proof": {
+    "contract": "0xbd06bb4d0a50f84fec7dcd3a916605ff662e7d61",
+    "deploymentTx": "0x81926658e403c0db914f08a2cfb4779b5634363809701feaa982653cb94bd408",
+    "commitTx": "0x19aa15f6021deb6c368bed2fecb63bb1e07ab69fbaaad1f9a113a82b609b2c51",
+    "outcomeTx": "0xa6b47e9695d056ce07b4478e29af3c34550c8100b753df7b475c4c2f9cbc9227",
+    "readback": "PASS"
+  },
+  "payment": {
+    "integration": "READY",
+    "preflight": "PASS",
+    "liveSettlement": "WAITING FOR TEST USDC"
+  }
+}

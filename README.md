@@ -142,6 +142,17 @@ npm run payment:exact:client
 
 The server and client commands require the relevant test-wallet configuration and balances. Run servers and clients in separate terminals.
 
+## Web Demo
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000` for the product story or
+`http://localhost:3000/demo` for the deterministic live session.
+
 ## Environment
 
 Copy `.env.example` to `.env.local`, then set only the values needed for the command you are running:

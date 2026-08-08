@@ -1,0 +1,29 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "Ceiling product website and deterministic demo",
+  "private": true,
+  "scripts": {
+    "predev": "npm --prefix .. run demo:web:generate",
+    "dev": "next dev",
+    "prebuild": "npm --prefix .. run demo:web:generate",
+    "build": "next build --webpack",
+    "start": "next start",
+    "typecheck": "next typegen && tsc --noEmit",
+    "lint": "eslint app components lib --max-warnings=0"
+  },
+  "keywords": [],
+  "dependencies": {
+    "next": "^16.2.9",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.9",
+    "typescript": "^5.9.3"
+  }
+}
