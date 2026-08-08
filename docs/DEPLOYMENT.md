@@ -1,6 +1,6 @@
 # Deployment
 
-This document records the repository's current Monad Testnet configuration and executable payment procedures. It is not evidence that the registry or a payment has been deployed or settled.
+This document records the confirmed CeilingRegistry deployment and the executable payment procedures. Payment settlement remains separate and is not yet proven.
 
 ## Network
 
@@ -30,6 +30,7 @@ MONAD_RPC_URL=
 X402_FACILITATOR_URL=
 MONAD_USDC_ADDRESS=
 X402_UPTO_PROXY=
+CEILING_REGISTRY_ADDRESS=
 PAY_TO_ADDRESS=
 PRIVATE_KEY=
 PAY_TO_PRIVATE_KEY=
@@ -48,11 +49,31 @@ npm run contract:compile
 Current deployment status:
 
 ```text
-CONTRACT_ADDRESS: not deployed yet
-DEPLOYMENT_TRANSACTION: not available
+CONTRACT_ADDRESS: 0xbd06bb4d0a50f84fec7dcd3a916605ff662e7d61
+DEPLOYMENT_TRANSACTION: 0x81926658e403c0db914f08a2cfb4779b5634363809701feaa982653cb94bd408
+DEPLOYMENT_BLOCK: 51891875
 ```
 
-No deployment script is currently included. Add one only when deployment is explicitly scheduled, then record the real address and Monad explorer transaction.
+Explorer:
+
+- [CeilingRegistry](https://testnet.monadscan.com/address/0xbd06bb4d0a50f84fec7dcd3a916605ff662e7d61)
+- [Deployment transaction](https://testnet.monadscan.com/tx/0x81926658e403c0db914f08a2cfb4779b5634363809701feaa982653cb94bd408)
+
+The confirmed deployment metadata is stored in `deployments/monad-testnet.json`.
+
+Deploy a new registry only when intentionally replacing the recorded deployment:
+
+```bash
+npm run contract:deploy
+```
+
+Run a fresh core-driven commit, outcome, and readback proof against the recorded registry:
+
+```bash
+npm run contract:smoke
+```
+
+The current proof and explorer links are recorded in [On-chain Evidence](ONCHAIN.md).
 
 ## Payment Prerequisites
 
@@ -121,11 +142,11 @@ After a successful exact settlement, the resource server uses the payer address 
 
 ## Evidence Checklist
 
-Before updating repository status:
+Before updating payment status:
 
-- record the deployed registry address, if deployed;
+- preserve the deployed registry address and deployment transaction;
 - verify the registry bytecode on Monad Testnet;
-- preserve commit and outcome transaction links;
+- preserve each new commit and outcome transaction link;
 - preserve exact/upto settlement and refund transaction links;
 - verify amounts from chain data;
 - never replace missing evidence with a placeholder transaction hash.

@@ -12,6 +12,8 @@
     "demo:core": "tsx src/demo-core.ts",
     "test:core": "tsx src/core/core.test.ts",
     "contract:compile": "tsx scripts/compile-contract.ts",
+    "contract:deploy": "npm run contract:compile && tsx scripts/deploy-contract.ts",
+    "contract:smoke": "npm run contract:compile && tsx scripts/smoke-contract.ts",
     "payment:exact:server": "tsx payment/exact/server.ts",
     "payment:exact:client": "tsx payment/exact/client.ts",
     "check": "tsc --noEmit"

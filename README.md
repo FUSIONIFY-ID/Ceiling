@@ -91,7 +91,12 @@ The detailed module and trust-boundary description is in [Architecture](docs/ARC
 
 ## Monad
 
-Ceiling targets Monad Testnet, chain ID `10143`. Contract session commits and outcomes are designed to be recorded on Monad, while x402 USDC payments target the same network.
+Ceiling targets Monad Testnet, chain ID `10143`. The deployed
+[`CeilingRegistry`](https://testnet.monadscan.com/address/0xbd06bb4d0a50f84fec7dcd3a916605ff662e7d61)
+records session commits and outcomes on Monad, while x402 USDC payments target the same network.
+
+The deployment, session commit, and outcome transaction are recorded in
+[On-chain Evidence](docs/ONCHAIN.md).
 
 A single Ceiling session is chain-agnostic in principle. Monad becomes relevant when many independent machine-payment sessions are committed and settled concurrently without shared mutable session state.
 
@@ -116,6 +121,8 @@ npm install
 npm run check
 npm run test:core
 npm run contract:compile
+npm run contract:deploy
+npm run contract:smoke
 npm run demo:core
 npm run spike:preflight
 ```
@@ -144,6 +151,7 @@ MONAD_RPC_URL=
 X402_FACILITATOR_URL=
 MONAD_USDC_ADDRESS=
 X402_UPTO_PROXY=
+CEILING_REGISTRY_ADDRESS=
 PAY_TO_ADDRESS=
 PRIVATE_KEY=
 PAY_TO_PRIVATE_KEY=
@@ -161,17 +169,21 @@ PAY_TO_PRIVATE_KEY=
 | Core deterministic engine | PASS |
 | Independent recomputation | PASS |
 | Contract compile | PASS |
+| CeilingRegistry deployment | PASS |
+| On-chain session commit | PASS |
+| On-chain outcome record | PASS |
 | x402 preflight | PASS |
 | Live USDC payment | BLOCKED — test USDC funding |
 | Live refund | BLOCKED — requires preceding payment |
-| Contract deployment | NOT YET |
 
-No live payment, refund, contract deployment, or transaction hash is claimed.
+Deployed registry: `0xbd06bb4d0a50f84fec7dcd3a916605ff662e7d61`.
+No live USDC payment or refund is claimed.
 
 ## Repository Structure
 
 ```text
 contracts/  Solidity billing registry
+deployments/ Confirmed Monad deployment and session evidence
 docs/       Architecture, mechanism, operations, and submission notes
 payment/    x402 exact and USDC refund fallback
 scripts/    Lightweight contract compile check
