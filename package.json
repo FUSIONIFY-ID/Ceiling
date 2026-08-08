@@ -9,6 +9,11 @@
     "spike:approve": "tsx spike/approve.ts",
     "spike:server": "tsx spike/server.ts",
     "spike:client": "tsx spike/client.ts",
+    "demo:core": "tsx src/demo-core.ts",
+    "test:core": "tsx src/core/core.test.ts",
+    "contract:compile": "tsx scripts/compile-contract.ts",
+    "payment:exact:server": "tsx payment/exact/server.ts",
+    "payment:exact:client": "tsx payment/exact/client.ts",
     "check": "tsc --noEmit"
   },
   "dependencies": {
@@ -23,6 +28,7 @@
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^26.2.0",
+    "solc": "^0.8.36",
     "tsx": "^4.23.11",
     "typescript": "^7.0.2"
   }

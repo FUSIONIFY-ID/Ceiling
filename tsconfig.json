@@ -8,5 +8,10 @@
     "skipLibCheck": true,
     "noEmit": true
   },
-  "include": ["spike/**/*.ts"]
+  "include": [
+    "spike/**/*.ts",
+    "src/**/*.ts",
+    "payment/**/*.ts",
+    "scripts/**/*.ts"
+  ]
 }
