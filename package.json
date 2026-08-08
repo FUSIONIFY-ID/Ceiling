@@ -10,6 +10,7 @@
     "spike:server": "tsx spike/server.ts",
     "spike:client": "tsx spike/client.ts",
     "demo:core": "tsx src/demo-core.ts",
+    "demo:simulasi": "tsx scripts/simulasi-presentasi.ts",
     "demo:web:generate": "tsx scripts/generate-web-demo.ts",
     "test:core": "tsx src/core/core.test.ts",
     "contract:compile": "tsx scripts/compile-contract.ts",

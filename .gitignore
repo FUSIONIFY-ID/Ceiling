@@ -1,6 +1,7 @@
 node_modules/
 artifacts/
 .cursor/
+.claude/
 .env
 .env.*
 !.env.example
